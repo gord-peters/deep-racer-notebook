@@ -2,7 +2,7 @@
 
 ## Motivation
 
-In June 2022, I attended an AWS Summit and had a chance to learn about and build a model for DeepRacer. I was struck by how it made a complex topic (Machine Learning) simple, approachable, and fun. I felt it would be a perfect way to introduce my son's class, most of whom have a keen interest in technology, to it.
+In June 2022, I attended an AWS Summit and had a chance to learn about and build a model for [DeepRacer](https://aws.amazon.com/deepracer/). I was struck by how it made a complex topic (machine learning) simple, approachable, and fun. I felt it would be a perfect way to introduce my son's class, most of whom have a keen interest in technology, to it.
 
 I realized that the cost of iterating on models and training them could get prohibitively expensive for an entire class, so I looked into a way to train them using a local computer. That lead me to the DeepRacer local training project(s) and the community around it.
 
