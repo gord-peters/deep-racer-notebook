@@ -35,7 +35,7 @@ Note that I used `apt` to install these rather than `snap` since I ran into [thi
 
 I followed the instructions for a local installation on [this webpage](https://aws-deepracer-community.github.io/deepracer-for-cloud/installation.html) and ran into the following problems.
 
-By default, `docker` requires system permissions/access which regular users don't have. To fix this, you need to add your user account to the `docker` group as follows:
+By default, `docker` requires system permissions/access which regular user accounts don't have. To fix this, you need to add your user account to the `docker` group as follows:
 ```
 sudo usermod -aG docker ${USER}
 ```
