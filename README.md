@@ -15,7 +15,7 @@ I had an old Mac Pro (MacPro3,1) gathering dust and thought it would make an ide
 ```
 MacPro3,1
 2 x 2.8GHz Quad Core Xeon CPUs (E5462)
-22GB DDR2 800MHz ECC RAM
+26GB DDR2 800MHz ECC RAM
 1TB SATA III SSD (connected via a SATA II connector on the motherboard)
 ATI Radeon HD 2600 XT w/ 256 MB GDDR3 SDRAM (obviously not useful for GPU training)
 ```
