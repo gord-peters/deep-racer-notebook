@@ -10,7 +10,7 @@ I realized that the cost of iterating on models and training them could get proh
 
 ### Hardware
 
-I had an old Mac Pro (MacPro3,1) gathering dust and thought it would make an ideal (albeit slow) budget training machine since it was designed to be run 24/7 (has server-grade hardware and good cooling). It only had 6GB of RAM and mechanical hard drives, so I purchased another 16GB of RAM and a 1TB SSD for it. Here are the technical details:
+I had an old Mac Pro (MacPro3,1) gathering dust and thought it would make an ideal (albeit slow) budget training machine since it was designed to be run 24/7 (has server-grade hardware and good cooling). It only had 10GB of RAM and mechanical hard drives, so I purchased another 16GB of RAM + a 1TB SSD for better performance. Here are the technical specs:
 
 ```
 MacPro3,1
