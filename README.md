@@ -12,8 +12,7 @@ I realized that the cost of iterating on models and training them could get proh
 
 I had an old Mac Pro (MacPro3,1) gathering dust and thought it would make an ideal (albeit slow) budget training machine since it was designed to be run 24/7 (has server-grade hardware and good cooling). It only had 10GB of RAM and mechanical hard drives, so I purchased another 16GB of RAM + a 1TB SSD for better performance. Here are the technical specs:
 
-```
-MacPro3,1
+```MacPro3,1
 2 x 2.8GHz Quad Core Xeon CPUs (E5462)
 26GB DDR2 800MHz ECC RAM
 1TB SATA III SSD (connected via a SATA II connector on the motherboard)
@@ -37,16 +36,17 @@ Note that I used `apt` to install these rather than `snap` since I ran into [thi
 I followed the instructions for a local installation on [this webpage](https://aws-deepracer-community.github.io/deepracer-for-cloud/installation.html) and ran into the following problems.
 
 By default, `docker` requires system permissions/access which regular user accounts don't have. To fix this, you need to add your user account to the `docker` group as follows:
-```
-sudo usermod -aG docker ${USER}
-```
 
-The Python `boto3` module is required so I used PIP to install it:
+```sudo usermod -aG docker ${USER}```
 
-```
-pip3 install boto3
-```
+The Python `boto3` module is required so I used [pip](https://pypi.org/project/pip/) to install it:
 
-Redis core dumped on me during Sagemaker start up. Still trying to figure out why.
+```pip3 install boto3```
 
-TODO: Document AWS setup
+One the first run of `dr-start-training`, I saw the following crash (core dump) after it started Sagemaker:
+
+```Illegal instruction (core dumped)```
+
+Upon further investigation, I discovered that this is due to the CPUs in the Mac Pro not having [AVX instructions](https://en.wikipedia.org/wiki/Advanced_Vector_Extensions). It turns out that these are [required by Robomaker](https://hub.docker.com/r/awsdeepracercommunity/deepracer-robomaker).
+
+My final attempt to get it working will be to install a modern GPU in the Mac Pro and use that with Robomaker (to bypass the CPU requirements). I've been able to successfully install an NVIDIA GTX 1660 Super graphics card in the Mac Pro and boot into Ubuntu (using a PC PSU to power it). Now I just need to see how stable it is before I commit to [tapping the Mac Pro PSU](https://thehouseofmoth.com/mac-pro-pixlas-mod/) for power.
