@@ -49,7 +49,19 @@ One the first run of `dr-start-training`, I saw the following crash (core dump) 
 
 Upon further investigation, I discovered that this is due to the CPUs in the Mac Pro not having [AVX instructions](https://en.wikipedia.org/wiki/Advanced_Vector_Extensions). It turns out that these are [required by Robomaker](https://hub.docker.com/r/awsdeepracercommunity/deepracer-robomaker).
 
-My final attempt to get it working will be to install a modern GPU in the Mac Pro and use that with Robomaker (to bypass the CPU requirements). I've been able to successfully install an NVIDIA GTX 1660 Super graphics card in the Mac Pro and boot into Ubuntu (using a PC PSU to power it). Now I just need to see how stable it is before I commit to [tapping the Mac Pro PSU](https://thehouseofmoth.com/mac-pro-pixlas-mod/) for power.
+My final attempt to get it working will be to install a modern GPU in the Mac Pro and use that with Robomaker (to bypass the CPU requirements). I've been able to successfully install an NVidia GTX 1660 Super graphics card in the Mac Pro and boot into Ubuntu (using a PC PSU to power it). Now I just need to see how stable it is before I commit to [tapping the Mac Pro PSU](https://thehouseofmoth.com/mac-pro-pixlas-mod/) for power.
+
+### GPU Setup
+
+Based on the instructions from [this page](https://aws-deepracer-community.github.io/deepracer-for-cloud/opengl.html), I looked at the `bin/prepare.sh` script to see what it installs for the GPU setup, and based on that, installed the following packages using `apt`:
+
+* nvidia-driver-515-server
+* cuda-minimal-build-11-7
+* nvidia-docker2
+* nvidia-container-toolkit
+* nvidia-container-runtime
+
+I needed to run the commands to add the NVidia apt repositories to my list in order to get some of those packages.
 
 ## Useful Links
 
