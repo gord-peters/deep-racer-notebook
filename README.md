@@ -50,3 +50,13 @@ One the first run of `dr-start-training`, I saw the following crash (core dump) 
 Upon further investigation, I discovered that this is due to the CPUs in the Mac Pro not having [AVX instructions](https://en.wikipedia.org/wiki/Advanced_Vector_Extensions). It turns out that these are [required by Robomaker](https://hub.docker.com/r/awsdeepracercommunity/deepracer-robomaker).
 
 My final attempt to get it working will be to install a modern GPU in the Mac Pro and use that with Robomaker (to bypass the CPU requirements). I've been able to successfully install an NVIDIA GTX 1660 Super graphics card in the Mac Pro and boot into Ubuntu (using a PC PSU to power it). Now I just need to see how stable it is before I commit to [tapping the Mac Pro PSU](https://thehouseofmoth.com/mac-pro-pixlas-mod/) for power.
+
+## Useful Links
+
+* [Main DeepRacer Page](https://aws.amazon.com/deepracer/)
+* [DeepRacer-for-cloud documentation](https://aws-deepracer-community.github.io/deepracer-for-cloud/)
+* [DeepRacer Local Training Community Wiki Page](https://wiki.deepracing.io/Local_Training)
+* [DeepRacer Community GitHub](https://github.com/aws-deepracer-community)
+* [DeepRacer Community DockerHub](https://registry.hub.docker.com/u/awsdeepracercommunity)
+* [Advanced Guide to DeepRacer](https://towardsdatascience.com/an-advanced-guide-to-aws-deepracer-2b462c37eea)
+* [Classic Mac Pro Upgrade Guide](https://blog.greggant.com/posts/2018/05/07/definitive-mac-pro-upgrade-guide.html)
