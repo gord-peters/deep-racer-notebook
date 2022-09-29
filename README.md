@@ -59,4 +59,5 @@ My final attempt to get it working will be to install a modern GPU in the Mac Pr
 * [DeepRacer Community GitHub](https://github.com/aws-deepracer-community)
 * [DeepRacer Community DockerHub](https://registry.hub.docker.com/u/awsdeepracercommunity)
 * [Advanced Guide to DeepRacer](https://towardsdatascience.com/an-advanced-guide-to-aws-deepracer-2b462c37eea)
+* [TensorFlow Guide](https://www.tensorflow.org/guide)
 * [Classic Mac Pro Upgrade Guide](https://blog.greggant.com/posts/2018/05/07/definitive-mac-pro-upgrade-guide.html)
