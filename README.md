@@ -54,6 +54,8 @@ My final attempt to get it working will be to install a modern GPU in the Mac Pr
 ## Useful Links
 
 * [Main DeepRacer Page](https://aws.amazon.com/deepracer/)
+* [DeepRacer Community](https://deepracing.io)
+* [DeepRacer Community on Slack](http://join.deepracing.io/)
 * [DeepRacer-for-cloud documentation](https://aws-deepracer-community.github.io/deepracer-for-cloud/)
 * [DeepRacer Local Training Community Wiki Page](https://wiki.deepracing.io/Local_Training)
 * [DeepRacer Community GitHub](https://github.com/aws-deepracer-community)
