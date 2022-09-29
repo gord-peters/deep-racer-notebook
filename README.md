@@ -28,6 +28,7 @@ After discussion on the #dr-training-local Slack channel, I decided to go the ro
 * docker
 * jq
 * awscli
+* python3-pip
 
 Note that I used `apt` to install these rather than `snap` since I ran into [this issue with jq](https://stackoverflow.com/questions/58128001/could-not-open-file-lol-json-permission-denied-using-jq) on my first attempt.
 
@@ -40,9 +41,12 @@ By default, `docker` requires system permissions/access which regular user accou
 sudo usermod -aG docker ${USER}
 ```
 
-Additionally, because my Mac Pro has multiple network devices, `docker` needed to know which interface to bind to. Since I don't currently need multiple machines in my swarm, I used this command to bind it to the loopback (local only) interface:
+The Python `boto3` module is required so I used PIP to install it:
+
 ```
-docker swarm init --advertise-addr 127.0.0.1
+pip3 install boto3
 ```
 
-Still working through the AWS setup...
+Redis core dumped on me during Sagemaker start up. Still trying to figure out why.
+
+TODO: Document AWS setup
